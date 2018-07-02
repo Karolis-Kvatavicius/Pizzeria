@@ -1,4 +1,4 @@
-package lesson_06_29.drinks;
+package lesson_06_29_pizzeria.drinks;
 
 public class Tea implements Drink {
 
@@ -15,11 +15,11 @@ private double kaina;
         this.sugar = sugar;
         this.honey = honey;
 
-        if (sugar == true) {
+        if (sugar && !honey) {
              this.kaina = 1;
-        } else if (honey == true) {
+        } else if (honey && !sugar) {
                  this.kaina = 2;
-        } else if (sugar == true && honey == true) {
+        } else if (sugar && honey) {
             this.kaina = 3;
         } else  {
             this.kaina = 0.5;
@@ -30,4 +30,9 @@ private double kaina;
     public double getKaina() {
 
       return kaina; }
+//
+//    @Override
+//    public Drink order(Drink drink) {
+//        return null;
+//    }
 }
