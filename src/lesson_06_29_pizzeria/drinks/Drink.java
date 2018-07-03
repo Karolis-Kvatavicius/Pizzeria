@@ -1,9 +1,9 @@
 package lesson_06_29_pizzeria.drinks;
 
+//TODO interfeisas nepanaudotas
 public interface Drink {
 
-     int kiekis = 0;
+    Drink orderPrice ();
 
-//public Drink order(Drink drink);
 
 }

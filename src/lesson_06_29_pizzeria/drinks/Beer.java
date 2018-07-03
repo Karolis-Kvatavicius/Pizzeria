@@ -22,8 +22,10 @@ public class Beer implements Drink {
         return kaina;
     }
 
-//    @Override
-//    public Drink order(Drink drink) {
-//       return drink;
-//    }
+    @Override
+    public Drink orderPrice() {
+        return null;
+    }
+    
+
 }

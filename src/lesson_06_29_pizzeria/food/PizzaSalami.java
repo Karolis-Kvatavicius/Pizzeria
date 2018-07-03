@@ -6,18 +6,25 @@ import static lesson_06_29_pizzeria.Sauce.HOT;
 import static lesson_06_29_pizzeria.Sauce.MILD;
 import static lesson_06_29_pizzeria.Sauce.MIX;
 
-public class PizzaSalami {
+public class PizzaSalami implements Food {
 
     private double kaina;
 
     public PizzaSalami(Sauce sauce) {
-        this.kaina = 10;
+        this.kaina = 12;
         if(sauce == MILD) {
-            this.kaina = 10 + MILD.getPrice();
+            this.kaina = 12 + MILD.getPrice();
         } else if(sauce == MIX) {
-            this.kaina = 10 + MIX.getPrice();
+            this.kaina = 12 + MIX.getPrice();
         } else if(sauce == HOT) {
-            this.kaina = 10 + HOT.getPrice();
+            this.kaina = 12 + HOT.getPrice();
         }
+    }
+    public double getKaina() {
+        return kaina;
+    }
+    @Override
+    public double orderPrice() {
+        return this.kaina;
     }
 }

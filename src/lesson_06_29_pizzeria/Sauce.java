@@ -1,5 +1,6 @@
 package lesson_06_29_pizzeria;
 
+// TODO enumas lygtais neturetu buti public
 public enum Sauce {
 
     MILD(1),
@@ -11,6 +12,7 @@ public enum Sauce {
     Sauce(double price) {
         this.price = price;
     }
+
 
     public double getPrice() {
         return price;

@@ -4,35 +4,29 @@ public class Tea implements Drink {
 
     private boolean sugar;
     private boolean honey;
-private double kaina;
+    private double kaina;
 
     public Tea(boolean sugar, boolean honey) {
         this.sugar = sugar;
         this.honey = honey;
-    }
-
-    public Tea(boolean sugar, boolean honey, double kaina) {
-        this.sugar = sugar;
-        this.honey = honey;
 
         if (sugar && !honey) {
-             this.kaina = 1;
+            this.kaina = 1;
         } else if (honey && !sugar) {
-                 this.kaina = 2;
+            this.kaina = 2;
         } else if (sugar && honey) {
             this.kaina = 3;
-        } else  {
+        } else {
             this.kaina = 0.5;
         }
 
     }
-
     public double getKaina() {
+        return kaina;
+    }
 
-      return kaina; }
-//
-//    @Override
-//    public Drink order(Drink drink) {
-//        return null;
-//    }
+    @Override
+    public Drink orderPrice() {
+        return this;
+    }
 }

@@ -1,6 +1,6 @@
 package lesson_06_29_pizzeria.drinks;
 
-public class Coffee {
+public class Coffee implements Drink{
     private boolean sugar;
     private boolean milk;
     private double kaina;
@@ -20,6 +20,13 @@ public class Coffee {
             }
 
         }
+    public double getKaina() {
+        return kaina;
+    }
+    @Override
+    public Drink orderPrice() {
+        return this;
+    }
 
     }
 

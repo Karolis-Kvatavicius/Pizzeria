@@ -5,24 +5,22 @@ public class Water implements Drink {
 
     private boolean still;
     private double kaina;
-    private int kiekis;
 
     public Water(boolean still) {
         this.still = still;
-        this.kiekis = kiekis;
 
-        if (still == true) {
+        if (still) {
             this.kaina = 1;
-        } else if (still == false) {
+        } else if (!still) {
             this.kaina = 2;
-          }
+        }
     }
-
+    public double getKaina() {
+        return kaina;
+    }
     @Override
-    public String toString() {
-        return "Water{" +
-                "still=" + still +
-
-                '}';
+    public Drink orderPrice() {
+        return this;
     }
+
 }
